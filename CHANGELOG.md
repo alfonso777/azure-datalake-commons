@@ -1,2 +1,3 @@
 ## v0.1.0
-- Size calculation of folders and containers
+- Listing Blobs of some folder and container 
+- Size calculation of individual blobs and folders
