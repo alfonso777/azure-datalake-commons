@@ -1,7 +1,7 @@
 from azure.storage.blob import BlobServiceClient
 from azure.core.exceptions import ResourceNotFoundError
 
-class AzureDatalakeMetadata():
+class AzureBlobService():
     _account_url: str
     _default_container: str
     _sas: str
