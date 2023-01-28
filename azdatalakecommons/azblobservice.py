@@ -44,9 +44,7 @@ class AzureBlobService():
             #blob_client = self._blob_service_client.get_blob_client(container=self._get_container(container), blob=folder_path)
             blob_names = self.list_blob_names(blob_path, container)
             size_total = 0
-            for blob_path in blob_names:
-                size_total = size_total + self.get_blob_size(blob_path, container)
-            return size_total
+            return sum( [ self.get_blob_size(blob_path, container) for blob_path in blob_names ] )
         except ResourceNotFoundError as ex:
             return None
 
